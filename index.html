@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Athlete - Elevate Your Performance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/alpha-athlete-logo.jpg" alt="logo" style="width: 50px; cursor:pointer;">
+                <!-- <h2>AlphA Athlete</h2> -->
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#collections" class="nav-link">Collections</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="cart-btn" id="cartBtn">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">NEW COLLECTION</div>
+                <h1 class="hero-title">Elevate Your Performance With AlphA Gear</h1>
+                <p class="hero-text">Discover premium athletic wear designed for champions. Push your limits with gear that moves with you.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="shopNowBtn">Shop Now →</button>
+                    <button class="btn btn-outline">View Collections</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid" id="featuresGrid">
+                <!-- Features will be rendered by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <a href="#" class="view-all">View All →</a>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be rendered by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="collections" id="collections">
+        <div class="container">
+            <h2 class="section-title">Shop By Collection</h2>
+            <div class="collections-grid" id="collectionsGrid">
+                <!-- Collections will be rendered by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" id="about">What Athletes Say</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial-container" id="testimonialContainer">
+                    <!-- Testimonials will be rendered by JavaScript -->
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="prevBtn">‹</button>
+                    <button class="carousel-btn next" id="nextBtn">›</button>
+                </div>
+                <div class="carousel-dots" id="carouselDots">
+                    <!-- Dots will be rendered by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated With AlphA Gear</h2>
+                <p>Get the latest updates on new products, exclusive offers, and athletic tips.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" id="emailInput" required>
+                    <button type="submit" class="btn btn-white">Subscribe</button>
+                </form>
+                <div class="newsletter-message" id="newsletterMessage"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AlphA Athlete</h3>
+                    <p>Elevating athletic performance through premium gear and unwavering dedication to excellence.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#collections">Collections</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="https://wa.me/919870026550" id="contact">Contact Us</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/alphaathleete?igsh=dnNsdTczMmN2ejI1"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/14m5w73WPm/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919870026550"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AlphA Athlete. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Shopping Cart</h3>
+                <span class="close" id="closeCart">&times;</span>
+            </div>
+            <div class="modal-body" id="cartItems">
+                <!-- Cart items will be rendered here -->
+            </div>
+            <div class="modal-footer">
+                <div class="cart-total" id="cartTotal">Total: ₹0</div>
+                <button class="btn btn-primary" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -14,10 +14,10 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main Navigation">
         <div class="container">
             <div class="nav-brand">
-                <img src="images/alpha-athlete-logo.jpg" alt="logo" style="width: 50px; cursor:pointer;">
+                <img src="images/alpha-athlete-logo.jpg" alt="Alpha Athlete Logo" style="width: 50px; cursor:pointer;">
                 <!-- <h2>AlphA Athlete</h2> -->
             </div>
             <div class="nav-menu" id="navMenu">
@@ -26,12 +26,12 @@
                 <a href="#collections" class="nav-link">Collections</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <button class="cart-btn" id="cartBtn">
-                    <span class="cart-icon">🛒</span>
+                <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+                    <span class="cart-icon" aria-hidden="true">🛒</span>
                     <span class="cart-count" id="cartCount">0</span>
                 </button>
             </div>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" aria-label="Open navigation menu" tabindex="0" role="button">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -81,7 +81,7 @@
     <section class="collections" id="collections">
         <div class="container">
             <h2 class="section-title">Shop By Collection</h2>
-            <div class="collections-grid" id="collectionsGrid">
+            <div class="collections-grid" id="collectionsGrid" aria-live="polite">
                 <!-- Collections will be rendered by JavaScript -->
             </div>
         </div>
@@ -92,12 +92,12 @@
         <div class="container">
             <h2 class="section-title" id="about">What Athletes Say</h2>
             <div class="testimonial-carousel">
-                <div class="testimonial-container" id="testimonialContainer">
+                <div class="testimonial-container" id="testimonialContainer" aria-live="polite">
                     <!-- Testimonials will be rendered by JavaScript -->
                 </div>
                 <div class="carousel-controls">
-                    <button class="carousel-btn prev" id="prevBtn">‹</button>
-                    <button class="carousel-btn next" id="nextBtn">›</button>
+                    <button class="carousel-btn prev" id="prevBtn" aria-label="Previous testimonial">‹</button>
+                    <button class="carousel-btn next" id="nextBtn" aria-label="Next testimonial">›</button>
                 </div>
                 <div class="carousel-dots" id="carouselDots">
                     <!-- Dots will be rendered by JavaScript -->
@@ -112,11 +112,11 @@
             <div class="newsletter-content">
                 <h2>Stay Updated With AlphA Gear</h2>
                 <p>Get the latest updates on new products, exclusive offers, and athletic tips.</p>
-                <form class="newsletter-form" id="newsletterForm">
-                    <input type="email" placeholder="Enter your email" id="emailInput" required>
+                <form class="newsletter-form" id="newsletterForm" aria-label="Newsletter subscription form">
+                    <input type="email" placeholder="Enter your email" id="emailInput" required aria-label="Email address">
                     <button type="submit" class="btn btn-white">Subscribe</button>
                 </form>
-                <div class="newsletter-message" id="newsletterMessage"></div>
+                <div class="newsletter-message" id="newsletterMessage" aria-live="polite"></div>
             </div>
         </div>
     </section>
@@ -150,9 +150,9 @@
                 <div class="footer-section">
                     <h4>Follow Us</h4>
                     <div class="social-links">
-                        <a href="https://www.instagram.com/alphaathleete?igsh=dnNsdTczMmN2ejI1"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/share/14m5w73WPm/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://wa.me/919870026550"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/alphaathleete?igsh=dnNsdTczMmN2ejI1" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/14m5w73WPm/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919870026550" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -163,13 +163,13 @@
     </footer>
 
     <!-- Cart Modal -->
-    <div class="modal" id="cartModal">
+    <div class="modal" id="cartModal" aria-modal="true" role="dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h3>Shopping Cart</h3>
-                <span class="close" id="closeCart">&times;</span>
+                <span class="close" id="closeCart" tabindex="0" role="button" aria-label="Close cart">&times;</span>
             </div>
-            <div class="modal-body" id="cartItems">
+            <div class="modal-body" id="cartItems" aria-live="polite">
                 <!-- Cart items will be rendered here -->
             </div>
             <div class="modal-footer">

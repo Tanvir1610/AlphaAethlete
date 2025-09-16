@@ -57,6 +57,24 @@ const products = [
     reviews: 203,
     image: "images/Leggings.png",
   },
+  {
+    id: 5,
+    name: "Hoodie Sweatshirt Black",
+    price: 1999,
+    category: "Apparel",
+    rating: 4.7,
+    reviews: 300,
+    image: "images/Hoodie Sweatshirt Black.jpg",
+  },
+  {
+    id: 5,
+    name: "Hoodie Sweatshirt Beige",
+    price: 1999,
+    category: "Apparel",
+    rating: 4.7,
+    reviews: 273,
+    image: "images/Hoodie Sweatshirt Beige.jpg",
+  },
 ]
 
 const collections = [
@@ -125,6 +143,16 @@ document.addEventListener("DOMContentLoaded", () => {
 function initializeNavigation() {
   hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active")
+    // Update aria-expanded for accessibility
+    hamburger.setAttribute("aria-expanded", navMenu.classList.contains("active"))
+  })
+
+  // Keyboard accessibility for hamburger
+  hamburger.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      navMenu.classList.toggle("active")
+      hamburger.setAttribute("aria-expanded", navMenu.classList.contains("active"))
+    }
   })
 
   // Smooth scrolling for navigation links
@@ -139,6 +167,7 @@ function initializeNavigation() {
         })
       }
       navMenu.classList.remove("active")
+      hamburger.setAttribute("aria-expanded", "false")
     })
   })
 
@@ -232,6 +261,7 @@ function renderTestimonials() {
 }
 
 // Testimonial Carousel
+let carouselInterval = null;
 function initializeCarousel() {
   const prevBtn = document.getElementById("prevBtn")
   const nextBtn = document.getElementById("nextBtn")
@@ -239,8 +269,9 @@ function initializeCarousel() {
   prevBtn.addEventListener("click", () => changeSlide(-1))
   nextBtn.addEventListener("click", () => changeSlide(1))
 
-  // Auto-slide every 5 seconds
-  setInterval(() => {
+  // Prevent multiple intervals
+  if (carouselInterval) clearInterval(carouselInterval)
+  carouselInterval = setInterval(() => {
     changeSlide(1)
   }, 5000)
 }
@@ -290,6 +321,13 @@ function initializeCart() {
 
   window.addEventListener("click", (e) => {
     if (e.target === cartModal) {
+      cartModal.style.display = "none"
+    }
+  })
+
+  // Close modal with Escape key
+  window.addEventListener("keydown", (e) => {
+    if (cartModal.style.display === "block" && e.key === "Escape") {
       cartModal.style.display = "none"
     }
   })

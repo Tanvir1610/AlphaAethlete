@@ -806,6 +806,35 @@ video {
     grid-template-columns: 1fr;
   }
 
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    margin: 0 auto;
+    max-width: 350px;
+  }
+
+  .product-image {
+    height: 250px;
+  }
+
+  .product-info {
+    padding: 1.2rem;
+  }
+
+  .product-name {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .product-description {
+    font-size: 0.85rem;
+    -webkit-line-clamp: 2;
+    margin-bottom: 0.8rem;
+  }
+
   .collection-card {
     height: 250px;
   }
@@ -816,6 +845,37 @@ video {
 
   .testimonial-text {
     font-size: 1.1rem;
+  }
+}
+
+/* Additional mobile optimizations for touch devices */
+@media (max-width: 768px) and (pointer: coarse) {
+  .add-to-cart {
+    min-height: 44px; /* iOS recommended touch target size */
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .product-card {
+    touch-action: manipulation;
+  }
+
+  .cart-btn {
+    min-height: 44px;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* High DPI displays (Retina, high-res Android) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
   }
 }
 
@@ -854,6 +914,46 @@ video {
     font-size: 1.1rem;
   }
 }
+  /* Two column layout for products on small phones */
+  .products-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .product-card {
+    max-width: none;
+    margin: 0;
+  }
+
+  .product-image {
+    height: 180px;
+  }
+
+  .product-info {
+    padding: 1rem;
+  }
+
+  .product-name {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .product-description {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+    margin-bottom: 0.75rem;
+  }
+
+  .add-to-cart {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
 
 .social-links a {
   width: 40px;

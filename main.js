@@ -23,39 +23,39 @@ const features = [
 const products = [
   {
     id: 1,
-    name: "Pro Runner Shoes",
-    price: 8999,
-    category: "Footwear",
+    name: "Hoodie Sweatshirt Black",
+    price: 1999,
+    category: "Apparel",
     rating: 4.8,
     reviews: 124,
-    image: "images/red-black-running-shoes.png",
+    image: "images/1.jpg",
   },
   {
     id: 2,
-    name: "Athletic Performance Tee",
-    price: 2499,
+    name: "Hoodie Sweatshirt Black",
+    price: 1999,
     category: "Apparel",
     rating: 4.6,
     reviews: 89,
-    image: "images/red-athletic-tee.png",
+    image: "images/2.jpg",
   },
   {
     id: 3,
-    name: "Training Shorts",
+    name: "Hoodie Sweatshirt Black",
     price: 1999,
     category: "Apparel",
     rating: 4.7,
     reviews: 156,
-    image: "images/Training-Shorts.png",
+    image: "images/3.jpg",
   },
   {
     id: 4,
-    name: "Compression Leggings",
-    price: 3499,
+    name: "Hoodie Sweatshirt Black",
+    price: 1999,
     category: "Apparel",
     rating: 4.9,
     reviews: 203,
-    image: "images/Leggings.png",
+    image: "images/4.jpg",
   },
   {
     id: 5,
@@ -64,7 +64,7 @@ const products = [
     category: "Apparel",
     rating: 4.7,
     reviews: 300,
-    image: "images/Hoodie Sweatshirt Black.jpg",
+    image: "images/5.jpg",
   },
   {
     id: 5,
@@ -73,7 +73,43 @@ const products = [
     category: "Apparel",
     rating: 4.7,
     reviews: 273,
-    image: "images/Hoodie Sweatshirt Beige.jpg",
+    image: "images/1 (1).jpg",
+  },
+  {
+    id: 5,
+    name: "Hoodie Sweatshirt Beige",
+    price: 1999,
+    category: "Apparel",
+    rating: 4.7,
+    reviews: 273,
+    image: "images/2 (1).jpg",
+  },
+  {
+    id: 5,
+    name: "Hoodie Sweatshirt Beige",
+    price: 1999,
+    category: "Apparel",
+    rating: 4.7,
+    reviews: 273,
+    image: "images/3 (1).jpg",
+  },
+  {
+    id: 5,
+    name: "Hoodie Sweatshirt Beige",
+    price: 1999,
+    category: "Apparel",
+    rating: 4.7,
+    reviews: 273,
+    image: "images/4 (1).jpg",
+  },
+  {
+    id: 5,
+    name: "Hoodie Sweatshirt Beige",
+    price: 1999,
+    category: "Apparel",
+    rating: 4.7,
+    reviews: 273,
+    image: "images/5 (1).jpg",
   },
 ]
 
@@ -205,6 +241,7 @@ function renderProducts() {
             <div class="product-info">
                 <div class="product-category">${product.category}</div>
                 <h3 class="product-name">${product.name}</h3>
+                <p class="product-description">${product.description}</p>
                 <div class="product-price">₹${product.price.toLocaleString()}</div>
                 <div class="product-rating">
                     <div class="stars">${"★".repeat(Math.floor(product.rating))}${"☆".repeat(5 - Math.floor(product.rating))}</div>
